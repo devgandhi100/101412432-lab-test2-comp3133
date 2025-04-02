@@ -1,0 +1,68 @@
+<div class="mission-list-container">
+    <app-missionfilter (filterChanged)="onFilterChanged($event)"></app-missionfilter>
+  
+    <div class="mission-grid">
+      <mat-card
+        *ngFor="let mission of missions"
+        (click)="goToDetails(mission.flight_number)"
+        class="mission-card"
+      >
+        <mat-card-header>
+          <mat-card-title>
+            {{ mission.mission_name }} ({{ mission.launch_year }})
+          </mat-card-title>
+          <mat-card-subtitle>
+            Rocket: {{ mission.rocket.rocket_name }} ({{ mission.rocket.rocket_type }})
+          </mat-card-subtitle>
+        </mat-card-header>
+  
+        <img
+          mat-card-image
+          [src]="mission.links.mission_patch_small"
+          alt="Mission Patch"
+          class="mission-patch"
+        />
+  
+        <mat-card-content>
+          <p>
+            <strong>Status:</strong>
+            <span [ngClass]="mission.launch_success ? 'success' : 'failure'">
+              {{ mission.launch_success ? 'Success' : 'Failed' }}
+            </span>
+          </p>
+          <p><strong>Details:</strong> {{ mission.details || 'No info available.' }}</p>
+        </mat-card-content>
+  
+        <mat-card-actions>
+          <a
+            mat-button
+            *ngIf="mission.links.article_link"
+            [href]="mission.links.article_link"
+            target="_blank"
+            (click)="$event.stopPropagation()"
+          >
+            <mat-icon>description</mat-icon> Article
+          </a>
+          <a
+            mat-button
+            *ngIf="mission.links.wikipedia"
+            [href]="mission.links.wikipedia"
+            target="_blank"
+            (click)="$event.stopPropagation()"
+          >
+            <mat-icon>language</mat-icon> Wikipedia
+          </a>
+          <a
+            mat-button
+            *ngIf="mission.links.video_link"
+            [href]="mission.links.video_link"
+            target="_blank"
+            (click)="$event.stopPropagation()"
+          >
+            <mat-icon>play_circle</mat-icon> Video
+          </a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  

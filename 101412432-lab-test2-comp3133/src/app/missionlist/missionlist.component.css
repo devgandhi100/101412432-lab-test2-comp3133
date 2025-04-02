@@ -1,0 +1,52 @@
+.mission-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .mission-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .mission-card {
+    width: 320px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+  .mission-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .mission-patch {
+    height: 200px;
+    object-fit: contain;
+    background-color: #f5f5f5;
+    padding: 12px;
+  }
+  
+  .success {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .failure {
+    color: red;
+    font-weight: bold;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  mat-card-actions a mat-icon {
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+  

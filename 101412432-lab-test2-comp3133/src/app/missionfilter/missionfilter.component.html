@@ -1,0 +1,30 @@
+<div class="filter-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Launch Year</mat-label>
+      <mat-select [(ngModel)]="filters.year" (selectionChange)="emitFilter()">
+        <mat-option value="">All</mat-option>
+        <mat-option *ngFor="let year of years" [value]="year">{{ year }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Launch Success</mat-label>
+      <mat-select [(ngModel)]="filters.launch_success" (selectionChange)="emitFilter()">
+        <mat-option value="">All</mat-option>
+        <mat-option value="true">Successful</mat-option>
+        <mat-option value="false">Failed</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Land Success</mat-label>
+      <mat-select [(ngModel)]="filters.land_success" (selectionChange)="emitFilter()">
+        <mat-option value="">All</mat-option>
+        <mat-option value="true">Successful</mat-option>
+        <mat-option value="false">Failed</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <button mat-stroked-button color="warn" (click)="clearFilters()">Clear Filters</button>
+  </div>
+  
