@@ -1,59 +1,92 @@
-# 101412432LabTest2Comp3133
+# 🚀 COMP3133 Lab Test 2 - SpaceX Mission Explorer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+This is an Angular-based single-page application that interacts with the [SpaceX Launches API](https://api.spacexdata.com/v3/launches) to display a list of missions, apply filters, and view detailed mission information.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📁 Project Structure
+
+```
+comp3133-lab-test2-spacex/
+├── README.md
+├── angular.json
+├── package.json
+├── tsconfig.json
+├── .gitignore
+├── index.html
+├── styles.css
+├── src/
+│   ├── main.ts
+│   ├── app/
+│   │   ├── app.config.ts
+│   │   ├── app.routes.ts
+│   │   ├── spacex.service.ts
+│   │   ├── models/
+│   │   │   └── mission.ts
+│   │   ├── missionlist/
+│   │   |   ├── missionlist.component.ts
+│   │   |   ├── missionlist.component.html
+│   │   |   ├── missionlist.component.css
+│   │   |   └── missionlist.component.spec.ts
+│   │   ├── missionfilter/    
+│   │   │   ├── missionfilter.component.ts
+│   │   │   ├── missionfilter.component.html
+│   │   │   ├── missionfilter.component.css
+│   │   │   └── missionfilter.component.spec.ts
+│   │   └── missiondetails/
+│   │   ├── missiondetails.component.ts
+│   │   ├── missiondetails.component.html
+│   │   ├── missiondetails.component.css
+│   │   └── missiondetails.component.spec.ts
+```
+
+
+---
+
+## 🌐 Features
+
+- ✅ View a list of all SpaceX missions
+- 🔎 Filter missions by:
+  - Launch year
+  - Launch success
+  - Landing success
+- 🔁 Clear all filters
+- 📄 View detailed information about any mission
+- 🧭 Back button to return to the mission list
+- 📱 Responsive UI with Angular Material
+- 🎨 Icons for action buttons (Article, Wikipedia, Video)
+
+---
+
+## 🧪 Technologies Used
+
+- Angular 17+
+- TypeScript
+- Angular Material
+- RxJS
+- SpaceX REST API
+
+---
+
+## 🚀 Getting Started
+
+### ✅ 1. Clone the Repository
 
 ```bash
+git clone https://github.com/devgandhi100/101412432-lab-test2-comp3133.git
+cd spacex-missions
+```
+
+### ✅ 2. Install Dependencies
+```
+npm install
+```
+
+### ✅ 3. Run the Development Server
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 👨‍💻 Author
+- Dev Gandhi
+- Student ID: 101412432
